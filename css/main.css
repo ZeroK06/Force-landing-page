@@ -1,0 +1,313 @@
+* {
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #000;
+  width: 100%;
+}
+:root {
+  --color: #fff700;
+}
+.social__container {
+  position: fixed;
+  left: 0;
+  top: calc((100vh / 2) - 125px);
+  display: flex;
+  flex-direction: column;
+}
+.social__container a {
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s width ease-in-out;
+}
+.social__container a:nth-child(1) {
+  background: #3b5998;
+}
+.social__container a:nth-child(2) {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.social__container a:nth-child(3) {
+  background: #bb0000;
+}
+.social__container a:nth-child(4) {
+  background: #0088cc;
+}
+.social__container a:nth-child(5) {
+  background: #aad450;
+}
+.social__container > a:hover {
+  width: 70px;
+}
+.hero {
+  height: 100vh;
+  background: radial-gradient(transparent, #000),
+    url("../assets/anastase-maragos-7kEpUPB8vNk-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.hero__nav {
+  display: flex;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5em;
+}
+.nav__logo,
+.footer__logo {
+  color: var(--color);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+}
+#check,
+.menu {
+  display: none !important;
+}
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+}
+.nav__menu a {
+  padding: 5px 15px;
+  color: var(--color);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 20px;
+  margin-left: 1em;
+  transition: 0.3s background ease-in-out;
+}
+.nav__menu a:hover {
+  background: rgba(255, 247, 0, 0.4);
+}
+.nav__menu--cta {
+  border: 2px solid var(--color);
+}
+.menu {
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--color);
+}
+.hero__main {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color);
+}
+.main__title {
+  border: 3px solid var(--color);
+  font-size: 6em;
+  padding: 20px 50px;
+  backdrop-filter: blur(15px);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: arial;
+}
+.main__learn {
+  position: relative;
+  transform: translateY(200px);
+  animation: 1s learn infinite alternate ease-in-out;
+}
+.main__learn::after {
+  content: "";
+  border-top: 20px solid var(--color);
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  bottom: -45px;
+  left: 15px;
+}
+.main {
+  width: 90%;
+  color: var(--color);
+  margin: 0 auto;
+  padding: 5em 0 0 0;
+}
+.main__benefits {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 33% 33% 33%;
+  gap: 1em;
+}
+.main__benefits div {
+  height: 450px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  transition: 0.3s transform ease-in-out;
+}
+.main__benefits div:hover {
+  transform: translateY(-20px);
+}
+
+.main__benefits > div > span:nth-child(1) {
+  border: 5px solid var(--color);
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__benefits > div > span:nth-child(1) i {
+  font-size: 40px;
+}
+.main__inscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  border-radius: 30px;
+  width: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 5em auto;
+}
+.main__inscription > * {
+  margin: 20px 0;
+}
+.main__inscription > span {
+  width: 400px;
+  background: rgb(136, 136, 136);
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.main__inscription > span > input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: var(--color);
+}
+.main__inscription > span > input::placeholder {
+  color: var(--color);
+}
+.main__inscription > input {
+  padding: 5px 15px;
+  border: 2px solid var(--color);
+  background: transparent;
+  color: var(--color);
+  font-size: 20px;
+  border-radius: 20px;
+}
+.main__inscription > input:hover {
+  background: rgba(255, 247, 0, 0.4);
+}
+.main__inscription > label {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.footer {
+  height: 25vh;
+  background: rgb(70, 70, 70);
+  display: flex;
+  justify-content: space-around;
+  color: var(--color);
+  align-items: center;
+}
+.footer__menu {
+  list-style-type: none;
+}
+.footer__menu a {
+  color: var(--color);
+  text-decoration: none;
+}
+.footer__menu li {
+  margin: 2em 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero__nav {
+    padding: 0 1.5em;
+  }
+  .nav__menu {
+    padding: 130px 0 0 0;
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 1000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    transition: 0.3s left ease-in-out;
+  }
+  .menu {
+    display: block !important;
+    z-index: 200;
+  }
+  #check:checked ~ .nav__menu {
+    left: 0;
+  }
+  .nav__menu li {
+    flex: auto;
+  }
+  .main__title {
+    padding: 10px 20px;
+    font-size: 30px;
+  }
+  .main__benefits {
+    grid-template-columns: 100%;
+  }
+  .main__inscription {
+    width: 100%;
+  }
+  .main__inscription span {
+    width: 90%;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    height: 50vh;
+  }
+}
+
+@keyframes learn {
+  0% {
+    transform: translateY(180px);
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 247, 0, 0.4);
+  border-radius: 20px;
+}
